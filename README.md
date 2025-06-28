@@ -31,3 +31,8 @@ A full-stack web application for tracking expenses, built with Node.js, Express,
 1. Navigate to the root directory:
    ```bash
    cd expense-tracker
+
+
+## Live Demo
+- URL: (https://expense-tracker-one-lemon.vercel.app/)
+- Note: Render’s free tier uses ephemeral storage, so data may reset on redeployment.
