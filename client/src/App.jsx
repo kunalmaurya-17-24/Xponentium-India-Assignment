@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function App() {
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
   const [expenses, setExpenses] = useState([]);
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState('');
@@ -11,7 +12,7 @@ function App() {
 
   const fetchExpenses = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/expenses');
+      const response = await fetch(`${API_URL}/api/expenses`);
       const data = await response.json();
       setExpenses(data);
     } catch (err) {
@@ -31,7 +32,7 @@ function App() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/expenses', {
+      const response = await fetch(`${API_URL}/api/expenses`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ description, amount: parseFloat(amount) })
@@ -51,7 +52,7 @@ function App() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/expenses/${id}`, {
+      const response = await fetch(`${API_URL}/api/expenses/${id}`, {
         method: 'DELETE'
       });
       if (!response.ok && response.status !== 204) {
@@ -71,7 +72,7 @@ function App() {
 
   const handleUpdate = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/expenses/${id}`, {
+      const response = await fetch(`${API_URL}/api/expenses/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ description: editDescription, amount: parseFloat(editAmount) })
