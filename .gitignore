@@ -1,0 +1,12 @@
+# Node.js
+node_modules/
+package-lock.json
+expenses.db
+
+# Vite build output
+client/dist/
+client/node_modules/
+client/package-lock.json
+
+# Environment files
+.env
