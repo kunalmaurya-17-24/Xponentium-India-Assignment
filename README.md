@@ -14,10 +14,12 @@ A full-stack web application for tracking expenses, built with Node.js, Express,
 - Unit tests for all API endpoints
 
 ## Project Demo
-- [Demo Video](https://drive.google.com/your-video-link) (Optional: add link if created)
+- [Demo Video] [https://drive.google.com/your-video-link](https://drive.google.com/file/d/10LOvwnix8BlcsBaOPKgRR3D8KzMovtDt/view?usp=sharing)
 - Screenshots:
-  ![Expense List](screenshots/expense-list.png)
-  ![Add/Edit Expense](screenshots/add-edit.png)
+  
+  ![Expense List][screenshots/expense-list.png](https://drive.google.com/file/d/1s2b15z2pOHXUdpvqlGkYbqVaTJ91F6N8/view?usp=sharing)
+  
+  ![Add/Edit Expense] [screenshots/add-edit.png](https://drive.google.com/file/d/1vNyXtZWIRyiDv0vQgCftv0yQla3Hhg13/view?usp=sharing))
 
 ## Setup Instructions
 
