@@ -2,10 +2,10 @@ const { Sequelize, DataTypes } = require('sequelize');
 
 // Use in-memory database for tests, file-based for production
 const storage = process.env.NODE_ENV === 'test' ? ':memory:' : './expenses.db';
-const sequelize = new Sequelize({
+  const sequelize = new Sequelize({
   dialect: 'sqlite',
   storage,
-  logging: process.env.NODE_ENV === 'test' ? false : console.log
+  logging: false // Disable logging in all environments
 });
 
 const Expense = sequelize.define('Expense', {
